@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.app-sandbox</key>
+	<true/>
+	<key>com.apple.security.files.user-selected.read-write</key>
+	<true/>
+	<!-- 本地自用：允许扩展在用户主目录内写文件。
+	     build.sh 会把 __HOME__ 替换成 $HOME（如 /Users/你的用户名/）。
+	     注意：temporary-exception 不能被 Mac App Store 接受，只适合本地自签名/开发签名。 -->
+	<key>com.apple.security.temporary-exception.files.absolute-path.read-write</key>
+	<array>
+		<string>__HOME__/</string>
+	</array>
+</dict>
+</plist>

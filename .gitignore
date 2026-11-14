@@ -1,0 +1,10 @@
+# macOS 构建产物
+build/
+
+# 本地工具配置
+.claude/
+
+# 系统杂项
+.DS_Store
+*.swp
+*~
